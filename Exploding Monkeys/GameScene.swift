@@ -42,4 +42,7 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
 
     }
+    
+    func launch(#angle: Int, velocity: Int) {
+    }
 }
