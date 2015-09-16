@@ -16,18 +16,10 @@
 		CAB0235E1BA96EBF00760761 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB0235C1BA96EBF00760761 /* LaunchScreen.xib */; };
 		CAB0236A1BA96EC000760761 /* Exploding_MonkeysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB023691BA96EC000760761 /* Exploding_MonkeysTests.swift */; };
 		CAB023741BA974E000760761 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB023731BA974E000760761 /* Helper.swift */; };
-		CAB023811BA974E800760761 /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB023761BA974E800760761 /* banana.png */; };
-		CAB023821BA974E800760761 /* banana@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB023771BA974E800760761 /* banana@2x.png */; };
 		CAB023831BA974E800760761 /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = CAB023781BA974E800760761 /* hitBuilding.sks */; };
 		CAB023841BA974E800760761 /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = CAB023791BA974E800760761 /* hitPlayer.sks */; };
-		CAB023851BA974E800760761 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237A1BA974E800760761 /* player.png */; };
-		CAB023861BA974E800760761 /* player1Throw.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237B1BA974E800760761 /* player1Throw.png */; };
-		CAB023871BA974E800760761 /* player1Throw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237C1BA974E800760761 /* player1Throw@2x.png */; };
-		CAB023881BA974E800760761 /* player2Throw.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237D1BA974E800760761 /* player2Throw.png */; };
-		CAB023891BA974E800760761 /* player2Throw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237E1BA974E800760761 /* player2Throw@2x.png */; };
-		CAB0238A1BA974E800760761 /* player@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237F1BA974E800760761 /* player@2x.png */; };
-		CAB0238B1BA974E800760761 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB023801BA974E800760761 /* spark.png */; };
 		CAB0238D1BAA11BA00760761 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB0238C1BAA11BA00760761 /* BuildingNode.swift */; };
+		CAB023911BAA2FEC00760761 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CAB023901BAA2FEC00760761 /* assets.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,18 +46,10 @@
 		CAB023681BA96EC000760761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB023691BA96EC000760761 /* Exploding_MonkeysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exploding_MonkeysTests.swift; sourceTree = "<group>"; };
 		CAB023731BA974E000760761 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		CAB023761BA974E800760761 /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banana.png; sourceTree = "<group>"; };
-		CAB023771BA974E800760761 /* banana@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banana@2x.png"; sourceTree = "<group>"; };
 		CAB023781BA974E800760761 /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
 		CAB023791BA974E800760761 /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
-		CAB0237A1BA974E800760761 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
-		CAB0237B1BA974E800760761 /* player1Throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player1Throw.png; sourceTree = "<group>"; };
-		CAB0237C1BA974E800760761 /* player1Throw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player1Throw@2x.png"; sourceTree = "<group>"; };
-		CAB0237D1BA974E800760761 /* player2Throw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2Throw.png; sourceTree = "<group>"; };
-		CAB0237E1BA974E800760761 /* player2Throw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player2Throw@2x.png"; sourceTree = "<group>"; };
-		CAB0237F1BA974E800760761 /* player@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player@2x.png"; sourceTree = "<group>"; };
-		CAB023801BA974E800760761 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		CAB0238C1BAA11BA00760761 /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
+		CAB023901BAA2FEC00760761 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,17 +134,9 @@
 		CAB023751BA974E800760761 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				CAB023761BA974E800760761 /* banana.png */,
-				CAB023771BA974E800760761 /* banana@2x.png */,
+				CAB023901BAA2FEC00760761 /* assets.atlas */,
 				CAB023781BA974E800760761 /* hitBuilding.sks */,
 				CAB023791BA974E800760761 /* hitPlayer.sks */,
-				CAB0237A1BA974E800760761 /* player.png */,
-				CAB0237B1BA974E800760761 /* player1Throw.png */,
-				CAB0237C1BA974E800760761 /* player1Throw@2x.png */,
-				CAB0237D1BA974E800760761 /* player2Throw.png */,
-				CAB0237E1BA974E800760761 /* player2Throw@2x.png */,
-				CAB0237F1BA974E800760761 /* player@2x.png */,
-				CAB023801BA974E800760761 /* spark.png */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -214,6 +190,7 @@
 				TargetAttributes = {
 					CAB023491BA96EBF00760761 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = GRFMFYY59P;
 					};
 					CAB023621BA96EC000760761 = {
 						CreatedOnToolsVersion = 6.4;
@@ -245,21 +222,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB023871BA974E800760761 /* player1Throw@2x.png in Resources */,
-				CAB0238A1BA974E800760761 /* player@2x.png in Resources */,
+				CAB023911BAA2FEC00760761 /* assets.atlas in Resources */,
 				CAB0235E1BA96EBF00760761 /* LaunchScreen.xib in Resources */,
 				CAB0235B1BA96EBF00760761 /* Images.xcassets in Resources */,
-				CAB023851BA974E800760761 /* player.png in Resources */,
 				CAB023521BA96EBF00760761 /* GameScene.sks in Resources */,
 				CAB023831BA974E800760761 /* hitBuilding.sks in Resources */,
-				CAB023881BA974E800760761 /* player2Throw.png in Resources */,
-				CAB023821BA974E800760761 /* banana@2x.png in Resources */,
 				CAB023591BA96EBF00760761 /* Main.storyboard in Resources */,
-				CAB0238B1BA974E800760761 /* spark.png in Resources */,
 				CAB023841BA974E800760761 /* hitPlayer.sks in Resources */,
-				CAB023811BA974E800760761 /* banana.png in Resources */,
-				CAB023861BA974E800760761 /* player1Throw.png in Resources */,
-				CAB023891BA974E800760761 /* player2Throw@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,9 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Exploding Monkeys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,9 +392,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Exploding Monkeys/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
