@@ -27,7 +27,25 @@ extension SKNode {
 
 class GameViewController: UIViewController {
 
-    var currentGame: GameScene!
+    @IBOutlet weak var angleSlider: UISlider!
+    @IBOutlet weak var velocitySlider: UISlider!
+    @IBOutlet weak var angleLabel: UILabel!
+    @IBOutlet weak var velocityLabel: UILabel!
+    @IBOutlet weak var playerNumber: UILabel!
+    @IBOutlet weak var launchButton: UIButton!
+    
+    @IBAction func angleChanged(sender: AnyObject) {
+        
+    }
+    
+
+    @IBAction func velocityChanged(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func launch(sender: AnyObject) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
