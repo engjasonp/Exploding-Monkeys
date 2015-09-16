@@ -27,6 +27,8 @@ extension SKNode {
 
 class GameViewController: UIViewController {
 
+    var currentGame: GameScene!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +45,9 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             
             skView.presentScene(scene)
+
+            currentGame = scene
+            scene.viewController = self
         }
     }
 
