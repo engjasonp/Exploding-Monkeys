@@ -27,6 +27,7 @@
 		CAB023891BA974E800760761 /* player2Throw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237E1BA974E800760761 /* player2Throw@2x.png */; };
 		CAB0238A1BA974E800760761 /* player@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB0237F1BA974E800760761 /* player@2x.png */; };
 		CAB0238B1BA974E800760761 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB023801BA974E800760761 /* spark.png */; };
+		CAB0238D1BAA11BA00760761 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB0238C1BAA11BA00760761 /* BuildingNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		CAB0237E1BA974E800760761 /* player2Throw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player2Throw@2x.png"; sourceTree = "<group>"; };
 		CAB0237F1BA974E800760761 /* player@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player@2x.png"; sourceTree = "<group>"; };
 		CAB023801BA974E800760761 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		CAB0238C1BAA11BA00760761 /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CAB0234F1BA96EBF00760761 /* AppDelegate.swift */,
 				CAB023511BA96EBF00760761 /* GameScene.sks */,
 				CAB023531BA96EBF00760761 /* GameScene.swift */,
+				CAB0238C1BAA11BA00760761 /* BuildingNode.swift */,
 				CAB023551BA96EBF00760761 /* GameViewController.swift */,
 				CAB023571BA96EBF00760761 /* Main.storyboard */,
 				CAB0235A1BA96EBF00760761 /* Images.xcassets */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB023541BA96EBF00760761 /* GameScene.swift in Sources */,
+				CAB0238D1BAA11BA00760761 /* BuildingNode.swift in Sources */,
 				CAB023561BA96EBF00760761 /* GameViewController.swift in Sources */,
 				CAB023501BA96EBF00760761 /* AppDelegate.swift in Sources */,
 				CAB023741BA974E000760761 /* Helper.swift in Sources */,
