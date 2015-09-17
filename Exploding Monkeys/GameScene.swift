@@ -8,11 +8,16 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
-    
-    var buildings = [BuildingNode]()
+enum CollisionTypes: UInt32 {
+    case Banana = 1
+    case Building = 2
+    case Player = 4
+}
+
+class GameScene: SKScene, SKPhysicsContactDelegate {
     weak var viewController: GameViewController!
     
+    var buildings = [BuildingNode]()
     var player1: SKSpriteNode!
     var player2: SKSpriteNode!
     var banana: SKSpriteNode!
@@ -23,7 +28,10 @@ class GameScene: SKScene {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         
         createBuildings()
-        createPlayers()    }
+        createPlayers()
+        
+        physicsWorld.contactDelegate = self
+    }
     
     func createBuildings() {
         var currentX: CGFloat = -15
@@ -65,14 +73,6 @@ class GameScene: SKScene {
         let player2Building = buildings[buildings.count - 2]
         player2.position = CGPoint(x: player2Building.position.x, y: player2Building.position.y + ((player2Building.size.height + player2.size.height) / 2))
         addChild(player2)
-    }
-    
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-
-    }
-   
-    override func update(currentTime: CFTimeInterval) {
-
     }
     
     func launch(#angle: Int, velocity: Int) {
@@ -130,5 +130,94 @@ class GameScene: SKScene {
     
     func deg2rad(degrees: Int) -> Double {
         return Double(degrees) * M_PI / 180.0
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if let firstNode = firstBody.node {
+            if let secondNode = secondBody.node {
+                if firstNode.name == "banana" && secondNode.name == "building" {
+                    bananaHitBuilding(secondNode as! BuildingNode, atPoint: contact.contactPoint)
+                }
+                
+                if firstNode.name == "banana" && secondNode.name == "player1" {
+                    destroyPlayer(player1)
+                }
+                
+                if firstNode.name == "banana" && secondNode.name == "player2" {
+                    destroyPlayer(player2)
+                }
+            }
+        }
+    }
+    
+    func destroyPlayer(player: SKSpriteNode) {
+        let explosionPath = NSBundle.mainBundle().pathForResource("hitPlayer", ofType: "sks")!
+        let explosion = NSKeyedUnarchiver.unarchiveObjectWithFile(explosionPath) as! SKEmitterNode
+        explosion.position = player.position
+        addChild(explosion)
+        
+        player.removeFromParent()
+        banana?.removeFromParent()
+        
+        runAfterDelay(2) { [unowned self] in
+            let newGame = GameScene(size: self.size)
+            newGame.viewController = self.viewController
+            self.viewController.currentGame = newGame
+            
+            self.changePlayer()
+            newGame.currentPlayer = self.currentPlayer
+            
+            let transition = SKTransition.doorwayWithDuration(1.5)
+            self.view?.presentScene(newGame, transition: transition)
+            
+        }
+    }
+    
+    func bananaHitBuilding(building: BuildingNode, atPoint contactPoint: CGPoint) {
+        let buildingLocation = convertPoint(contactPoint, toNode: building)
+        building.hitAtPoint(buildingLocation)
+        
+        let explosionPath = NSBundle.mainBundle().pathForResource("hitBuilding", ofType: "sks")!
+        let explosion = NSKeyedUnarchiver.unarchiveObjectWithFile(explosionPath) as! SKEmitterNode
+        explosion.position = contactPoint
+        addChild(explosion)
+        
+        banana.name = ""
+        banana?.removeFromParent()
+        banana = nil
+        
+        changePlayer()
+    }
+    
+    func changePlayer() {
+        if currentPlayer == 1 {
+            currentPlayer = 2
+        } else {
+            currentPlayer = 1
+        }
+        
+        viewController.activatePlayerNumber(currentPlayer)
+    }
+        
+    override func update(currentTime: CFTimeInterval) {
+        if banana != nil {
+            if banana.position.y < -1000 {
+                banana.removeFromParent()
+                banana = nil
+                
+                changePlayer()
+            }
+        }
     }
 }
